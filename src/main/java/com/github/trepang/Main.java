@@ -1,4 +1,4 @@
-package net.coding.uevol;
+package com.github.trepang;
 
 
 import org.springframework.boot.SpringApplication;

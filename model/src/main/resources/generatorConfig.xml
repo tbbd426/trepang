@@ -17,12 +17,12 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.github.trepang.table.generated" targetProject="src/main/resources">
+        <javaModelGenerator targetPackage="com.github.trepang.generated.table" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="test.xml"  targetProject="\MBGTestProject\src">
+        <sqlMapGenerator targetPackage="com.github.trepang.table.generated.mapper"  targetProject="src/java/main">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
