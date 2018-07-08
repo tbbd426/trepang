@@ -1,0 +1,11 @@
+
+
+create table talks (
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  author varchar(40) NOT NULL,
+  talk Text NOT NULL,
+  last_update_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  primary key (id)
+);

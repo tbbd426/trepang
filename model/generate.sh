@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-mvn mybatis-generator:generate
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate

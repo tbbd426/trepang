@@ -5,11 +5,4 @@ package com.github.trepang;
  */
 public enum ThingType {
 
-    FOOD("吃了美味");
-
-    private String desc;
-
-    ThingType(String desc) {
-        this.desc = desc;
-    }
 }
