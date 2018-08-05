@@ -3,7 +3,10 @@ package com.github.trepang.dao;
 import java.util.List;
 import java.util.Optional;
 
-public class AbstractDao {
+/**
+ * @author tianbing
+ */
+public abstract class AbstractDao {
 
     protected static <T> Optional<T> firstOrEmpty(List<T> elems) {
         if (elems.size() > 0) {

@@ -7,7 +7,20 @@
     <classPathEntry location="./config/mysql-connector-java-6.0.6.jar"/>
 
     <context id="mysql" targetRuntime="MyBatis3">
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"/>
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin"/>
+        <!-- 存在即更新插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.UpsertPlugin">
+            <!--
+            支持upsertByExample，upsertByExampleSelective操作
+            ！需开启allowMultiQueries=true多条sql提交操作，所以不建议使用！
+            ! 目前在1.0.7-SNAPSHOT支持，有需要的可以下载试用
+            -->
+            <property name="allowMultiQueries" value="true"/>
+        </plugin>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost/trepang"
@@ -39,6 +52,10 @@
             <generatedKey column="ID" sqlStatement="MySql" identity="true"/>
             <columnOverride column="talk" jdbcType="VARCHAR"/>
             <!--<property name="trimStrings" value="true"/>-->
+        </table>
+        <table schema='blogs' tableName="blogs" domainObjectName="Blog">
+            <generatedKey column="ID" sqlStatement="MySql" identity="true"/>
+            <!--<columnOverride column="" jdbcType="VARCHAR"/>-->
         </table>
 
     </context>

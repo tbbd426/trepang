@@ -9,3 +9,11 @@ create table talks (
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   primary key (id)
 );
+
+create table blogs (
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  content_HTML Text NOT NULL,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  primary key (id)
+);
