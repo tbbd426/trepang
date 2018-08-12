@@ -15,6 +15,8 @@ public class BlogResp {
 
     private Long id;
 
+    private String title;
+
     private String content;
 
     private Date createdAt;

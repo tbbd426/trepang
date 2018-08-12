@@ -12,5 +12,7 @@ public class BlogReq {
 
     private Long id;
 
+    private String title;
+
     private String content;
 }

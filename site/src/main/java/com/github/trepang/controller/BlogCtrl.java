@@ -38,6 +38,7 @@ public class BlogCtrl extends BaseController {
     private Blog convert(BlogReq blogReq) {
         Blog blog = new Blog();
         blog.setId(blogReq.getId());
+        blog.setTitle(blog.getTitle());
         blog.setContentHtml(blogReq.getContent());
         return blog;
     }
@@ -46,6 +47,7 @@ public class BlogCtrl extends BaseController {
         return BlogResp.builder()
                 .content(blog.getContentHtml())
                 .id(blog.getId())
+                .title(blog.getTitle())
                 .updatedAt(blog.getUpdatedAt())
                 .createdAt(blog.getCreatedAt())
                 .build();
